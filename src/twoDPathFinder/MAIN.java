@@ -49,7 +49,7 @@ public class MAIN extends JFrame {
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try{
-					if(Integer.parseInt(text.getText())<=25)
+					if(Integer.parseInt(text.getText())<=25 && Integer.parseInt(text.getText()) > 1)
 					{
 						GridGenerate gn=new GridGenerate();
 						gn.settext(text.getText());
@@ -58,7 +58,7 @@ public class MAIN extends JFrame {
 					}
 					else
 					{
-						JOptionPane.showMessageDialog(null,"Number limit exceeds"+"\n");
+						JOptionPane.showMessageDialog(null,"Number limit should be in range 1 - 25"+"\n");
 					}
 					
 				}
